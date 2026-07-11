@@ -1,18 +1,17 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import type { SummarizePayload } from "../lib/summarize.js";
 
-export default async function handler(
-  req: VercelRequest,
-  res: VercelResponse,
-) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== "POST") {
     res.status(405).json({ error: "Method not allowed" });
     return;
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.RSG_MACHINES_SUMMARIZE_API_KEY;
   if (!apiKey) {
-    res.status(500).json({ error: "Server is missing ANTHROPIC_API_KEY" });
+    res
+      .status(500)
+      .json({ error: "Server is missing RSG_MACHINES_SUMMARIZE_API_KEY" });
     return;
   }
 

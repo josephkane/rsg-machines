@@ -1,0 +1,44 @@
+/* Visualizer-specific styling. Reuses the global CSS variables defined in
+   :root inside src/App.css (do not modify App.css). */
+
+.viz-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: auto;
+}
+
+/* Subtle fade-in for each layer. Layers carry a React key tied to their
+   selected component id, so changing a selection remounts the layer and
+   re-triggers this animation. */
+@keyframes vizFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.viz-layer {
+  animation: vizFadeIn 0.3s ease-out;
+}
+
+/* Dashed amber placeholder used for empty slots and the empty-state car. */
+.viz-ghost {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-dasharray: 4 3;
+  opacity: 0.35;
+}
+
+.viz-prompt {
+  font-family: var(--font-display);
+  fill: var(--color-accent);
+  text-shadow: 0 0 8px var(--color-accent-glow);
+}
+
+.viz-prompt-sub {
+  font-family: var(--font-body);
+  fill: var(--color-text-muted);
+}

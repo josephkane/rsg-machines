@@ -1,0 +1,75 @@
+import type { Addon } from '../types/addon';
+
+export const addonOptions: Addon[] = [
+  {
+    id: 'floodlights',
+    name: 'Floodlights',
+    powerRequirement: 1,
+    mountingPointsCost: 1,
+    description: 'Negates darkness penalties',
+  },
+  {
+    id: 'short-range-radar',
+    name: 'Short-Range Radar',
+    powerRequirement: 2,
+    mountingPointsCost: 1,
+    description: 'Detects hazards and vehicles within 100ft',
+  },
+  {
+    id: 'medium-range-radar',
+    name: 'Medium-Range Radar',
+    powerRequirement: 3,
+    mountingPointsCost: 1,
+    description: 'Detects hazards and vehicles within 300ft',
+  },
+  {
+    id: 'long-range-radar',
+    name: 'Long-Range Radar',
+    powerRequirement: 4,
+    mountingPointsCost: 1,
+    description: 'Detects hazards and vehicles within 1 mile',
+  },
+  {
+    id: 'welding-rig',
+    name: 'Welding Rig',
+    powerRequirement: 2,
+    mountingPointsCost: 1,
+    description: 'Can restore Durability points between encounters',
+  },
+  {
+    id: 'nos',
+    name: 'NOS',
+    powerRequirement: 1,
+    mountingPointsCost: 1,
+    description: 'Grants a temporary Speed boost as a combat action',
+  },
+  {
+    id: 'harpoon-launcher',
+    name: 'Harpoon Launcher',
+    powerRequirement: 2,
+    mountingPointsCost: 2,
+    description: 'Can tether or drag enemy vehicles',
+  },
+  {
+    id: 'railgun',
+    name: 'Railgun',
+    powerRequirement: 5,
+    mountingPointsCost: 2,
+    description: 'Long-range high-damage weapon',
+  },
+  {
+    id: 'targeting-computer',
+    name: 'Targeting Computer',
+    powerRequirement: 2,
+    mountingPointsCost: 1,
+    description: 'Improves precision, grants +1 to attack rolls',
+    statModifiers: { handling: 1 },
+  },
+  {
+    id: 'cargo-expansion',
+    name: 'Cargo Expansion',
+    powerRequirement: 1,
+    mountingPointsCost: 1,
+    description: 'Adds storage capacity for equipment and loot',
+  },
+];

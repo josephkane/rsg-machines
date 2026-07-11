@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npm test *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(kill 91055)",
+      "Bash(git stash *)",
+      "Bash(npx tsc *)",
+      "Bash(curl -sS -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:58990/ --max-time 5)",
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "Bash(xargs ls -la)"
+    ]
+  }
+}
